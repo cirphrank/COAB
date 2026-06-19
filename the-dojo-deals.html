@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%235876a8'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Cormorant Garamond, Georgia, serif' font-size='30' font-style='italic' font-weight='700' fill='white'>TD</text></svg>" sizes="any">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Dojo — Deals</title>
+  <meta name="description" content="Text-only deals and offers from The Dojo." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *:before, *:after { box-sizing:border-box; margin:0; padding:0 }
+    :root {
+      --blue:#5876a8;
+      --blue-deep:#445f8f;
+      --blue-soft:#7f97bf;
+      --blue-mist:#edf3fb;
+      --sky:#f8fbff;
+      --ink:#122238;
+      --ink-3:#3f546f;
+      --gray:#66758a;
+      --gray-3:#dce3ec;
+      --gray-5:#f8fafd;
+      --white:#fff;
+      --shadow-soft:0 22px 54px rgba(33,56,94,.07);
+      --shadow-hover:0 30px 70px rgba(33,56,94,.11);
+      --font-heading:'Cormorant Garamond', Georgia, serif;
+      --font-body:'Inter', system-ui, sans-serif;
+      --max:1100px;
+      --t:420ms cubic-bezier(.22,1,.36,1)
+    }
+    html { scroll-behavior:smooth; font-size:16px }
+    body {
+      font-family:var(--font-body);
+      color:var(--ink);
+      background:linear-gradient(180deg, var(--sky) 0%, #fff 30%, var(--gray-5) 100%);
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased
+    }
+    a { text-decoration:none; color:inherit }
+    button { font:inherit; border:0; background:none; cursor:pointer; color:inherit }
+    .container { width:min(calc(100% - 2rem), var(--max)); margin-inline:auto }
+    .section { padding:clamp(4.8rem, 8vw, 7rem) 0 }
+    :focus-visible { outline:2px solid var(--blue); outline-offset:3px }
+    h1, h2, h3, .brand strong { font-family:var(--font-heading) }
+
+    .site-header {
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.84);
+      border-bottom:1px solid rgba(220,227,236,.9);
+      backdrop-filter:blur(16px)
+    }
+    .nav-wrap {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      min-height:78px;
+      gap:2rem
+    }
+    .brand { display:flex; align-items:center; gap:.85rem }
+    .brand-icon {
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      background:linear-gradient(135deg, var(--blue), var(--blue-deep));
+      display:grid;
+      place-items:center;
+      color:#fff;
+      box-shadow:0 10px 24px rgba(68,95,143,.18)
+    }
+    .brand strong {
+      font-size:1.18rem;
+      font-weight:700;
+      letter-spacing:-.02em
+    }
+    .brand span {
+      display:block;
+      font-size:.7rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:var(--gray)
+    }
+    .nav { display:flex; align-items:center; gap:.35rem }
+    .nav a {
+      padding:.62rem 1rem;
+      font-size:.875rem;
+      font-weight:600;
+      color:var(--ink-3);
+      border-radius:999px;
+      transition:background var(--t), color var(--t), transform var(--t)
+    }
+    .nav a:hover {
+      background:var(--blue-mist);
+      color:var(--ink);
+      transform:translateY(-1px)
+    }
+    .nav-cta {
+      background:linear-gradient(135deg, var(--blue), var(--blue-deep)) !important;
+      color:#fff !important
+    }
+
+    .hero { padding:clamp(4.8rem, 9vw, 7rem) 0 2.5rem }
+    .kicker {
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      background:rgba(88,118,168,.08);
+      border:1px solid rgba(88,118,168,.16);
+      color:var(--blue-deep);
+      padding:.55rem 1rem;
+      border-radius:999px;
+      font-size:.77rem;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-bottom:1.2rem
+    }
+    .kicker:before {
+      content:'';
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:var(--blue-soft);
+      box-shadow:0 0 0 6px rgba(127,151,191,.1)
+    }
+    h1 {
+      font-size:clamp(2.8rem, 6vw, 4.8rem);
+      line-height:.95;
+      letter-spacing:-.05em;
+      max-width:11ch;
+      margin-bottom:1rem
+    }
+    .lead {
+      color:var(--gray);
+      max-width:56ch;
+      font-size:1.02rem;
+      line-height:1.9
+    }
+    .subtle { color:var(--gray); font-size:.92rem }
+
+    .deal-grid {
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:1.35rem;
+      margin-top:2.25rem
+    }
+    .deal-card {
+      position:relative;
+      background:rgba(255,255,255,.88);
+      border:1px solid var(--gray-3);
+      border-radius:24px;
+      padding:1.6rem;
+      box-shadow:var(--shadow-soft);
+      transition:transform var(--t), box-shadow var(--t), border-color var(--t)
+    }
+    .deal-card:hover {
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-hover);
+      border-color:rgba(127,151,191,.28)
+    }
+    .deal-tag {
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      background:rgba(88,118,168,.08);
+      color:var(--blue-deep);
+      border:1px solid rgba(88,118,168,.12);
+      border-radius:999px;
+      padding:.38rem .8rem;
+      font-size:.72rem;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      margin-bottom:1rem
+    }
+    .deal-card h3 { font-size:1.3rem; line-height:1.1; margin-bottom:.6rem }
+    .price { font-size:1.05rem; font-weight:800; color:var(--blue-deep); margin-bottom:.85rem }
+    .deal-card p {
+      color:var(--gray);
+      font-size:.93rem;
+      line-height:1.8;
+      margin-bottom:1.2rem
+    }
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.5rem;
+      padding:.92rem 1.4rem;
+      border-radius:999px;
+      font-size:.9rem;
+      font-weight:800;
+      letter-spacing:-.01em;
+      transition:transform var(--t), background var(--t), box-shadow var(--t);
+      font-family:var(--font-body)
+    }
+    .btn:hover { transform:translateY(-2px) }
+    .btn-red {
+      background:linear-gradient(135deg, var(--blue), var(--blue-deep));
+      color:#fff;
+      box-shadow:0 14px 30px rgba(68,95,143,.15)
+    }
+    .btn-outline {
+      background:#fff;
+      color:var(--ink);
+      border:1.5px solid rgba(88,118,168,.16)
+    }
+    .note-band {
+      margin-top:2.4rem;
+      padding:1.1rem 1.2rem;
+      border:1px solid rgba(88,118,168,.14);
+      border-radius:18px;
+      background:rgba(237,243,251,.55);
+      color:var(--gray);
+      font-size:.92rem;
+      line-height:1.8
+    }
+    .footer {
+      background:#14263d;
+      color:rgba(255,255,255,.58);
+      padding:2.4rem 0;
+      margin-top:4rem
+    }
+    .footer-wrap {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:1.5rem;
+      font-size:.875rem
+    }
+    .footer strong {
+      color:#fff;
+      font-family:var(--font-heading)
+    }
+
+    @media (max-width:960px) { .deal-grid { grid-template-columns:1fr 1fr } }
+    @media (max-width:720px) {
+      .nav { display:none }
+      .deal-grid { grid-template-columns:1fr }
+      .footer-wrap { flex-direction:column; text-align:center }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/" aria-label="The Dojo home">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TD logo">
+            <rect x="4" y="4" width="56" height="56" rx="12" fill="#5876a8"/>
+            <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="30" font-style="italic" font-weight="700" fill="#ffffff">TD</text>
+          </svg>
+        </span>
+        <span><strong>The Dojo</strong><span>By Cirphrank</span></span>
+      </a>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/Auq.html">Audit</a>
+        <a href="mailto:thedojo@cirphrank.com" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="kicker">Deals</div>
+        <h1>Budget-friendly deals, made simple.</h1><br>
+        <p class="lead">A simple page for products and offers we're putting on sale from time to time. No images, no clutter — just the name, the details, and a buy button.</p>
+        <p class="subtle" style="margin-top:1rem">Deals change often, so check back whenever you want fresh offers.<br><br><div class="kicker">Free Same DayDelivery Within Benin.</div></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="deal-grid">
+          <article class="deal-card">
+            <div class="deal-tag">Limited deal</div>
+            <h3>iPhone 11, 64GB</h3>
+            <div class="price">₦225,000</div>
+            <p>Battery Health : 81, fully unlocked. Clean body with minor scuffs, available for in-person pickup/inspection. Videos and pictures available on request before payment.
+            </p>
+            <a class="btn btn-red" href="https://wa.me/2348068098467?text=Hello%2C%20I%20want%20the%20225%20iPhone%2011%20Deal.">Buy now</a>
+          </article>
+
+          <article class="deal-card">
+            <div class="deal-tag">Flash sale</div>
+            <h3>iPhone SE3, 64GB</h3>
+            <div class="price">₦155,000</div>
+            <p>Clean body with minimal wear, fully unlocked. Available for in-person pickup/inspection. Videos and pictures available on request before payment.</p>
+            <a class="btn btn-red" href="https://wa.me/2348068098467?text=Hello%2C%20I%20want%20the%20155%20iPhone%20SE3%20Deal.">Buy now</a>
+          </article>
+
+          <article class="deal-card">
+            <div class="deal-tag">Bundle</div>
+            <h3>1Logo, 2Fliers</h3>
+            <div class="price">₦40,000</div>
+            <p>Best for a brand just launching and need a proper vector based visual identity. 
+                You actually get a logo, 2 fliers, and a business card design. The fliers are editable and can be used for social media or print. The business card is also editable and can be printed or shared digitally.
+            </p>
+            <a class="btn btn-red" href="https://wa.me/2348068098467?text=I%20want%20the%2040k%20brand%20bundle.">Order now</a>
+          </article>
+        </div>
+
+        <div class="note-band">
+          Want a deal not listed here? <a href="https://wa.me/2348068098467?text=Hello%2C%20I%20just%20got%20off%20your%20deals%20page%2C%20and%20I'm%20hoping%20you%20could%20get%20me%20a%20deal%20I%20didn't%20find%20there."><h3>Send an inquiry.</h3> </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p><strong>The Dojo</strong> — creator tools, deals, and consultations.</p>
+      <p>Text-only, fast, and easy to update.</p>
+    </div>
+  </footer>
+</body>
+</html>
