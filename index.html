@@ -8,29 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *:before, *:after { box-sizing:border-box; margin:0; padding:0 }
-    :root {
-      --blue:#5876a8;
-      --blue-deep:#445f8f;
-      --blue-soft:#7f97bf;
-      --blue-mist:#edf3fb;
-      --blue-line:#dbe5f1;
-      --sky:#f8fbff;
-      --ink:#122238;
-      --ink-2:#1d304b;
-      --ink-3:#3f546f;
-      --gray:#66758a;
-      --gray-2:#92a0b3;
-      --gray-3:#dce3ec;
-      --gray-4:#eff4f9;
-      --gray-5:#f8fafd;
-      --white:#ffffff;
-      --shadow-soft:0 22px 54px rgba(33, 56, 94, .07);
-      --shadow-hover:0 30px 70px rgba(33, 56, 94, .11);
-      --font-heading:'Cormorant Garamond', Georgia, serif;
-      --font-body:'Inter', system-ui, sans-serif;
-      --max:1200px;
-      --t:420ms cubic-bezier(.22,1,.36,1);
-    }
+    :root { --blue:#5876a8; --blue-deep:#445f8f; --blue-soft:#7f97bf; --blue-mist:#edf3fb; --blue-line:#dbe5f1; --sky:#f8fbff; --ink:#122238; --ink-2:#1d304b; --ink-3:#3f546f; --gray:#66758a; --gray-2:#92a0b3; --gray-3:#dce3ec; --gray-4:#eff4f9; --gray-5:#f8fafd; --white:#ffffff; --shadow-soft:0 22px 54px rgba(33, 56, 94, .07); --shadow-hover:0 30px 70px rgba(33, 56, 94, .11); --font-heading:'Cormorant Garamond', Georgia, serif; --font-body:'Inter', system-ui, sans-serif; --max:1200px; --t:420ms cubic-bezier(.22,1,.36,1) }
     html { scroll-behavior:smooth; font-size:16px }
     body { font-family:var(--font-body); color:var(--ink); background:linear-gradient(180deg, var(--sky) 0%, var(--white) 30%, var(--gray-5) 100%); line-height:1.65; -webkit-font-smoothing:antialiased }
     a { text-decoration:none; color:inherit }
@@ -41,7 +19,6 @@
     :focus-visible { outline:2px solid var(--blue); outline-offset:3px }
     .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }
     h1, h2, h3, .brand strong { font-family:var(--font-heading) }
-
     .site-header { position:sticky; top:0; z-index:100; background:rgba(255,255,255,.84); border-bottom:1px solid rgba(220, 227, 236, .9); backdrop-filter:blur(16px) }
     .nav-wrap { display:flex; align-items:center; justify-content:space-between; min-height:78px; gap:2rem }
     .brand { display:flex; align-items:center; gap:.85rem }
@@ -55,7 +32,6 @@
     .nav-cta { background:linear-gradient(135deg, var(--blue), var(--blue-deep)) !important; color:#fff !important; border-radius:999px !important; box-shadow:0 12px 24px rgba(68, 95, 143, .14) }
     .nav-cta:hover { background:linear-gradient(135deg, var(--blue-soft), var(--blue)) !important }
     .menu-btn { display:none; width:42px; height:42px; align-items:center; justify-content:center; border-radius:12px; border:1px solid var(--gray-3); background:rgba(255,255,255,.74) }
-
     .hero { background:radial-gradient(circle at top right, rgba(127,151,191,.18), transparent 32%), linear-gradient(135deg, #f7faff 0%, #eef4fb 46%, #fbfdff 100%); color:var(--ink); padding:clamp(6rem, 11vw, 8.75rem) 0 clamp(5rem, 8vw, 6.8rem); overflow:hidden; position:relative; border-bottom:1px solid rgba(220, 227, 236, .82) }
     .hero:before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 72% 28%, rgba(88,118,168,.11), transparent 55%); pointer-events:none }
     .hero-grid { display:grid; grid-template-columns:1.08fr .92fr; gap:4.5rem; align-items:center; position:relative }
@@ -74,7 +50,6 @@
     .btn-outline:hover { border-color:rgba(88,118,168,.28); background:#fff }
     .btn-dark { background:var(--ink); color:#fff; box-shadow:0 14px 28px rgba(18,34,56,.12) }
     .btn-dark:hover { background:var(--ink-2) }
-
     .hero-panel { background:rgba(255,255,255,.72); border:1px solid rgba(220,227,236,.96); border-radius:28px; padding:2.2rem; backdrop-filter:blur(16px); box-shadow:var(--shadow-soft); transition:transform var(--t), border-color var(--t), box-shadow var(--t), background var(--t); animation:floatPanel 12s ease-in-out infinite; margin-top:1.2rem }
     .hero-panel:hover { transform:translateY(-4px); border-color:rgba(127,151,191,.28); box-shadow:var(--shadow-hover); background:rgba(255,255,255,.84) }
     .hero-panel-title { font-size:.76rem; font-weight:700; text-transform:uppercase; letter-spacing:.14em; color:var(--gray-2); margin-bottom:1.3rem; font-family:var(--font-body) }
@@ -86,7 +61,6 @@
     .stat small { display:block; font-size:.74rem; color:var(--gray-2); text-transform:uppercase; letter-spacing:.09em; margin-top:.5rem; font-weight:600; font-family:var(--font-body) }
     .live-badge { display:inline-flex; align-items:center; gap:.55rem; font-size:.77rem; font-weight:700; color:var(--gray); letter-spacing:.09em; text-transform:uppercase; font-family:var(--font-body) }
     .live-badge:before { content:''; width:8px; height:8px; border-radius:50%; background:#70ba93; box-shadow:0 0 0 5px rgba(112,186,147,.12) }
-
     .band { background:linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%); color:#fff; padding:1rem 0; overflow:hidden; box-shadow:inset 0 1px 0 rgba(255,255,255,.08) }
     .band-inner { display:flex; width:max-content; gap:0; white-space:nowrap; font-size:.79rem; font-weight:700; letter-spacing:.11em; text-transform:uppercase; animation:marquee 34s linear infinite; font-family:var(--font-body); will-change:transform }
     .band-group { display:flex; align-items:center; gap:3rem; flex-shrink:0; padding-right:3rem }
@@ -94,7 +68,6 @@
     .band-item:before { content:'✦'; margin-right:1rem; opacity:.56 }
     @keyframes marquee { from { transform:translateX(0) } to { transform:translateX(-50%) } }
     @keyframes floatPanel { 0%,100% { transform:translateY(0) } 50% { transform:translateY(-4px) } }
-
     .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:5.4rem; align-items:center }
     .label { display:inline-flex; align-items:center; gap:.55rem; font-size:.74rem; font-weight:800; text-transform:uppercase; letter-spacing:.15em; color:var(--blue); margin-bottom:.95rem; font-family:var(--font-body) }
     .label:before { content:''; width:24px; height:2px; background:currentColor }
@@ -108,7 +81,6 @@
     .feature-card:hover:before { opacity:1 }
     .feature-card h3 { font-size:1.18rem; font-weight:700; margin-bottom:.5rem; letter-spacing:-.02em }
     .feature-card p { color:var(--gray); font-size:.94rem; line-height:1.82 }
-
     .services-bg { background:linear-gradient(180deg, #1d3658 0%, #244164 100%); color:#fff; position:relative; overflow:hidden }
     .services-bg:before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 20% 20%, rgba(127,151,191,.16), transparent 35%), radial-gradient(circle at 80% 80%, rgba(88,118,168,.14), transparent 32%); pointer-events:none }
     .services-head { text-align:center; max-width:44ch; margin:0 auto 3.65rem; position:relative }
@@ -125,7 +97,6 @@
     .svc-list { list-style:none; margin-top:1rem; display:grid; gap:.42rem }
     .svc-list li { font-size:.875rem; color:rgba(237,243,251,.58); padding-left:1rem; position:relative; font-family:var(--font-body) }
     .svc-list li:before { content:'—'; position:absolute; left:0; color:#c8d6ea; font-size:.75rem }
-
     .work-head { display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; margin-bottom:3.35rem }
     .work-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1.55rem }
     .work-card { border:1px solid var(--gray-3); border-radius:24px; overflow:hidden; transition:box-shadow var(--t), transform var(--t), border-color var(--t), background var(--t); background:rgba(255,255,255,.84); box-shadow:var(--shadow-soft) }
@@ -142,7 +113,6 @@
     .work-info p { color:var(--gray); font-size:.9rem; line-height:1.82; font-family:var(--font-body) }
     .work-info a { display:inline-flex; align-items:center; gap:.4rem; margin-top:1rem; font-size:.8rem; font-weight:700; color:var(--blue); text-transform:uppercase; letter-spacing:.1em; font-family:var(--font-body); transition:gap var(--t), color var(--t) }
     .work-info a:hover { gap:.7rem; color:var(--blue-deep) }
-
     .testi-bg { background:linear-gradient(180deg, var(--gray-5) 0%, #f3f7fc 100%) }
     .testi-head { text-align:center; max-width:44ch; margin:0 auto 3.75rem }
     .testi-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1.65rem }
@@ -150,11 +120,10 @@
     .testi-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-hover); border-color:rgba(127,151,191,.28) }
     .testi-card:hover:before { opacity:1 }
     .testi-card blockquote { font-size:.97rem; line-height:1.9; color:var(--ink-3); flex:1; font-family:var(--font-body) }
-    .testi-card blockquote:before { content:'\201C'; font-size:3rem; line-height:.6; display:block; color:var(--blue); margin-bottom:.85rem; font-family:Georgia, serif }
+    .testi-card blockquote:before { content:'“'; font-size:3rem; line-height:.6; display:block; color:var(--blue); margin-bottom:.85rem; font-family:Georgia, serif }
     .testi-footer { margin-top:1.55rem; padding-top:1.3rem; border-top:1px solid var(--gray-3) }
     .testi-footer strong { display:block; font-size:.98rem; font-weight:700; font-family:var(--font-heading) }
     .testi-footer span { font-size:.78rem; color:var(--gray); text-transform:uppercase; letter-spacing:.08em; font-weight:600; font-family:var(--font-body) }
-
     .contact-grid { display:grid; grid-template-columns:.95fr 1.05fr; gap:5.25rem; align-items:start }
     .contact-links { display:grid; grid-template-columns:1fr 1fr; gap:1.15rem }
     .contact-card { border:1px solid var(--gray-3); border-radius:22px; padding:1.55rem; transition:border-color var(--t), box-shadow var(--t), transform var(--t), background var(--t); background:rgba(255,255,255,.86); box-shadow:var(--shadow-soft) }
@@ -165,7 +134,6 @@
     .contact-card p { color:var(--gray); font-size:.89rem; line-height:1.78; font-family:var(--font-body) }
     .contact-card a.clink { display:inline-flex; align-items:center; gap:.4rem; margin-top:.85rem; font-size:.78rem; font-weight:800; color:var(--blue); text-transform:uppercase; letter-spacing:.1em; font-family:var(--font-body); transition:gap var(--t), color var(--t) }
     .contact-card a.clink:hover { gap:.7rem; color:var(--blue-deep) }
-
     .cta-band { background:linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%); color:#fff; padding:4.7rem 0; text-align:center; position:relative; overflow:hidden }
     .cta-band:before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 50% 20%, rgba(255,255,255,.14), transparent 45%); pointer-events:none }
     .cta-band .container { position:relative; z-index:1 }
@@ -173,39 +141,22 @@
     .cta-band p { color:rgba(255,255,255,.8); margin-bottom:2.2rem; font-size:1.05rem; font-family:var(--font-body) }
     .cta-band .btn-white { background:#fff; color:var(--blue-deep); font-weight:800; box-shadow:0 16px 28px rgba(20,38,66,.15) }
     .cta-band .btn-white:hover { background:#f2f6fb }
-
     .footer { background:#14263d; color:rgba(255,255,255,.55); padding:2.9rem 0 }
     .footer-wrap { display:flex; justify-content:space-between; align-items:center; gap:1.5rem; font-size:.875rem; font-family:var(--font-body) }
     .footer strong { color:rgba(255,255,255,.9); font-weight:700; font-family:var(--font-heading) }
-
     .reveal { opacity:0; transform:translateY(22px); transition:opacity 1.05s cubic-bezier(.22,1,.36,1), transform 1.05s cubic-bezier(.22,1,.36,1) }
     .reveal.in { opacity:1; transform:translateY(0) }
-
-    @media (max-width:1024px) {
-      .hero-grid { grid-template-columns:1fr; gap:3.4rem }
-      .hero-panel { max-width:540px }
-      .about-grid, .contact-grid { grid-template-columns:1fr; gap:3.35rem }
-      .work-card:first-child { grid-column:auto }
-      .work-grid { grid-template-columns:1fr 1fr }
-      .svc { grid-template-columns:60px 1fr }
-    }
-    @media (max-width:768px) {
-      .container { width:min(calc(100% - 2rem), var(--max)) }
-      .nav { display:none }
-      .nav.open { display:flex; flex-direction:column; align-items:flex-start; position:absolute; top:78px; left:0; right:0; background:rgba(255,255,255,.97); border-bottom:1px solid var(--gray-3); padding:1rem 1.25rem; backdrop-filter:blur(12px) }
-      .menu-btn { display:flex }
-      .work-grid, .testi-grid, .contact-links { grid-template-columns:1fr }
-      .work-head { flex-direction:column; align-items:flex-start }
-      .svc { grid-template-columns:1fr }
-      .svc-num { display:none }
-      .footer-wrap { flex-direction:column; text-align:center }
-      .hero h1 { font-size:clamp(2.75rem, 12vw, 4.25rem) }
-    }
-    @media (prefers-reduced-motion:reduce) {
-      *, .reveal, .hero-panel, .band-inner { transition:none !important; animation:none !important }
-      .reveal { opacity:1; transform:none }
-    }
+    .subscribe-wrap { max-width:760px; margin:0 auto; background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(248,250,253,.96)); border:1px solid rgba(127,151,191,.24); border-radius:24px; padding:2rem; box-shadow:0 26px 62px rgba(33,56,94,.08) }
+    .subscribe-wrap .result-tag { display:inline-flex; align-items:center; gap:.55rem; background:rgba(88,118,168,.08); border:1px solid rgba(88,118,168,.16); color:var(--blue-deep); padding:.55rem 1rem; border-radius:999px; font-size:.77rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin:0 auto 1rem; font-family:var(--font-body); box-shadow:0 6px 16px rgba(88,118,168,.05) }
+    .subscribe-wrap .result-tag:before { content:''; width:6px; height:6px; border-radius:50%; background:var(--blue-soft) }
+    .subscribe-wrap .result-title { font-size:1.6rem; font-weight:700; letter-spacing:-.02em; margin-bottom:.6rem; font-family:var(--font-heading); text-align:center }
+    .subscribe-wrap .result-desc { color:var(--gray); font-size:1.02rem; line-height:1.9; max-width:52ch; margin:0 auto 1.6rem; font-family:var(--font-body); text-align:center }
+    .subscribe-wrap .hint { color:var(--gray); font-size:1.02rem; line-height:1.9; max-width:52ch; margin:0 auto 1.6rem; font-family:var(--font-body); text-align:center }
+    @media (max-width:1024px) { .hero-grid { grid-template-columns:1fr; gap:3.4rem } .hero-panel { max-width:540px } .about-grid, .contact-grid { grid-template-columns:1fr; gap:3.35rem } .work-card:first-child { grid-column:auto } .work-grid { grid-template-columns:1fr 1fr } .svc { grid-template-columns:60px 1fr } }
+    @media (max-width:768px) { .container { width:min(calc(100% - 2rem), var(--max)) } .nav { display:none } .nav.open { display:flex; flex-direction:column; align-items:flex-start; position:absolute; top:78px; left:0; right:0; background:rgba(255,255,255,.97); border-bottom:1px solid var(--gray-3); padding:1rem 1.25rem; backdrop-filter:blur(12px) } .menu-btn { display:flex } .work-grid, .testi-grid, .contact-links { grid-template-columns:1fr } .work-head { flex-direction:column; align-items:flex-start } .svc { grid-template-columns:1fr } .svc-num { display:none } .footer-wrap { flex-direction:column; text-align:center } .hero h1 { font-size:clamp(2.75rem, 12vw, 4.25rem) } }
+    @media (prefers-reduced-motion:reduce) { *, .reveal, .hero-panel, .band-inner { transition:none !important; animation:none !important } .reveal { opacity:1; transform:none } }
   </style>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%235876a8'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Cormorant Garamond, Georgia, serif' font-size='30' font-style='italic' font-weight='700' fill='white'>TD</text></svg>" sizes="any">
 </head>
 <body>
   <header class="site-header">
@@ -213,14 +164,11 @@
       <a class="brand" href="#top" aria-label="The Dojo">
         <span class="brand-icon" aria-hidden="true">
           <svg width="28" height="28" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TD logo">
-  <rect x="4" y="4" width="56" height="56" rx="12" fill="#5876a8"/>
-  <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="30" font-style="italic" font-weight="700" fill="#ffffff">TD</text>
-</svg>
+            <rect x="4" y="4" width="56" height="56" rx="12" fill="#5876a8"/>
+            <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="30" font-style="italic" font-weight="700" fill="#ffffff">TD</text>
+          </svg>
         </span>
-        <span>
-          <strong>The Dojo</strong>
-          <span>By Cirphrank</span>
-        </span>
+        <span><strong>The Dojo</strong><span>By Cirphrank</span></span>
       </a>
       <nav class="nav" id="site-nav">
         <a href="#about">About</a>
@@ -238,7 +186,6 @@
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-copy">
-          
           <h1><em>Concise</em> direction for <em>creators</em>.</h1>
           <p>A creator-led agency by Cirphrank, built to help creators launch and or grow with concise resource management.</p>
           <div class="hero-btns">
@@ -258,7 +205,6 @@
         </div>
       </div>
     </section>
-
     <div class="band">
       <div class="container">
         <div class="band-inner">
@@ -281,7 +227,6 @@
         </div>
       </div>
     </div>
-
     <section class="section" id="about">
       <div class="container about-grid">
         <div class="reveal">
@@ -303,7 +248,6 @@
         </div>
       </div>
     </section>
-
     <section class="section services-bg" id="services">
       <div class="container">
         <div class="services-head reveal">
@@ -312,129 +256,32 @@
           <p>Three clear service lanes, built for creators at every stage.</p>
         </div>
         <div class="services-list reveal">
-          <div class="svc">
-            <div class="svc-num">01</div>
-            <div>
-              <h3>Consulting</h3>
-              <p style="color:rgba(255,255,255,.45);font-size:.9rem">Direction &amp; positioning</p>
-            </div>
-            <div class="svc-body">
-              <p>You know what you want, we know what you need.</p>
-              <ul class="svc-list">
-                <li>A free 30 minutes consultation</li>
-                <li>Brief Breakdown, helping you identify what you actually need</li>
-                <li>Clarity achieved, next steps defined</li>
-              </ul>
-            </div>
-          </div>
-          <div class="svc">
-            <div class="svc-num">02</div>
-            <div>
-              <h3>Budgeting</h3>
-              <p style="color:rgba(255,255,255,.45);font-size:.9rem">Spend with purpose</p>
-            </div>
-            <div class="svc-body">
-              <p>We map spending so every upgrade supports growth.</p>
-              <ul class="svc-list">
-                <li>Equipment and upgrade planning</li>
-                <li>Budget-conscious time and money management</li>
-                <li>Priority-based creator spending</li>
-              </ul>
-            </div>
-          </div>
-          <div class="svc">
-            <div class="svc-num">03</div>
-            <div>
-              <h3>Procurement</h3>
-              <p style="color:rgba(255,255,255,.45);font-size:.9rem">Source smarter</p>
-            </div>
-            <div class="svc-body">
-              <p>We guide smarter sourcing for the tools that matter.</p>
-              <ul class="svc-list">
-                <li>Helping you identify what you actually need</li>
-                <li>Workflow-focused recommendations</li>
-                <li>Practical sourcing guidance, of software, hardware and services</li>
-              </ul>
-            </div>
-          </div>
+          <div class="svc"><div class="svc-num">01</div><div><h3>Consulting</h3><p style="color:rgba(255,255,255,.45);font-size:.9rem">Direction &amp; positioning</p></div><div class="svc-body"><p>You know what you want, we know what you need.</p><ul class="svc-list"><li>A free 30 minutes consultation</li><li>Brief Breakdown, helping you identify what you actually need</li><li>Clarity achieved, next steps defined</li></ul></div></div>
+          <div class="svc"><div class="svc-num">02</div><div><h3>Budgeting</h3><p style="color:rgba(255,255,255,.45);font-size:.9rem">Spend with purpose</p></div><div class="svc-body"><p>We map spending so every upgrade supports growth.</p><ul class="svc-list"><li>Equipment and upgrade planning</li><li>Budget-conscious time and money management</li><li>Priority-based creator spending</li></ul></div></div>
+          <div class="svc"><div class="svc-num">03</div><div><h3>Procurement</h3><p style="color:rgba(255,255,255,.45);font-size:.9rem">Source smarter</p></div><div class="svc-body"><p>We guide smarter sourcing for the tools that matter.</p><ul class="svc-list"><li>Helping you identify what you actually need</li><li>Workflow-focused recommendations</li><li>Practical sourcing guidance, of software, hardware and services</li></ul></div></div>
         </div>
       </div>
     </section>
-
     <section class="section" id="work">
       <div class="container">
-        <div class="work-head reveal">
-          <div>
-            <div class="label">Featured creators</div>
-            <h2 class="heading" style="margin-bottom:0">Some projects we've worked on</h2>
-          </div>
-          <p style="color:var(--gray);max-width:38ch;font-size:.95rem;font-family:var(--font-body)"><i>nurturing dreams to life.</i>.</p>
-        </div>
+        <div class="work-head reveal"><div><div class="label">Featured creators</div><h2 class="heading" style="margin-bottom:0">Some projects we've worked on</h2></div><p style="color:var(--gray);max-width:38ch;font-size:.95rem;font-family:var(--font-body)"><i>nurturing dreams to life.</i>.</p></div>
         <div class="work-grid">
-          <div class="work-card reveal">
-            
-            <div class="work-info">
-              <div class="work-tag">Creator Launch And Scaling</div>
-              <h3>CurlieMide</h3>
-              <p>UGC creator, a personal brand focused on hair and beauty works.<br>
-              Helped get her channels started, shooting of contents on iPhone 7plus, content creation understanding from ideas and execution.<br> in 18 months she has worked with over 18 brands from since when she had just about 500 followers.</p>
-              <a href="https://www.instagram.com/curliemide/">View project →</a>
-            </div>
-          </div>
-          <div class="work-card reveal">
-            
-            <div class="work-info">
-              <div class="work-tag">Growth, Consulting</div>
-              <h3>KVNG OJAY LIVE</h3>
-              <p>A gamer we've actively consulted for on software, strategy and procurement.<br>Making it possible for him to scale his content and audience effectively with feature like webcam enabled live streaming using just mobile phones.</p>
-              <a href="https://www.youtube.com/@KVNGOJAY/streams">View project →</a>
-            </div>
-          </div>
-          <div class="work-card reveal">
-           
-            <div class="work-info">
-              <div class="work-tag">Procurement</div>
-              <h3>Flavy Gaming</h3>
-              <p>Procurement support for gaming equipment and software.</p>
-              <a href="https://www.tiktok.com/@flavygaming">View project →</a>
-            </div>
-          </div>
+          <div class="work-card reveal"><div class="work-info"><div class="work-tag">Creator Launch And Scaling</div><h3>CurlieMide</h3><p>UGC creator, a personal brand focused on hair and beauty works.<br>Helped get her channels started, shooting of contents on iPhone 7plus, content creation understanding from ideas and execution.<br> in 18 months she has worked with over 18 brands from since when she had just about 500 followers.</p><a href="https://www.instagram.com/curliemide/">View project →</a></div></div>
+          <div class="work-card reveal"><div class="work-info"><div class="work-tag">Growth, Consulting</div><h3>KVNG OJAY LIVE</h3><p>A gamer we've actively consulted for on software, strategy and procurement.<br>Making it possible for him to scale his content and audience effectively with feature like webcam enabled live streaming using just mobile phones.</p><a href="https://www.youtube.com/@KVNGOJAY/streams">View project →</a></div></div>
+          <div class="work-card reveal"><div class="work-info"><div class="work-tag">Procurement</div><h3>Flavy Gaming</h3><p>Procurement support for gaming equipment and software.</p><a href="https://www.tiktok.com/@flavygaming">View project →</a></div></div>
         </div>
       </div>
     </section>
-
     <section class="section testi-bg" id="testimonials">
       <div class="container">
-        <div class="testi-head reveal">
-          <div class="label">Testimonials</div>
-          <h2 class="heading">What creators say.</h2>
-        </div>
+        <div class="testi-head reveal"><div class="label">Testimonials</div><h2 class="heading">What creators say.</h2></div>
         <div class="testi-grid">
-          <div class="testi-card reveal">
-            <blockquote>The Dojo has assisted me in so many ways in my streaming journey. <br>From getting me a better mobile gaming device to getting a good camera, then a streaming device and software to help run my stream smoothly on YouTube.<br><br> They have also helped me gain knowledge on recent technology to dig into and its benefits.</blockquote>
-            <div class="testi-footer">
-              <strong>Oje</strong>
-              <span>Livestreamer, Creator.</span>
-            </div>
-          </div>
-          <div class="testi-card reveal">
-            <blockquote><br>Working with the dojo has been such a great experience; they helped me scale from no content to quality content through goal-focused acquisition of gadgets and services, enabling me to work with brands both local and international. And I still actively work with them.</blockquote>
-            <div class="testi-footer">
-              <strong>Mrs. Igunboh</strong>
-              <span>UGC Creator</span>
-            </div>
-          </div>
-          <div class="testi-card reveal">
-            <blockquote><br>The Dojo inspired the creation of the Flavy gaming brand and provided actionable ideas, information and tips on the right gadgets that helped scale the brand from a dream to fruition on a next-to-zero budget. I've used their services for designing, procurement and a whole lot more! And the show is still very much on.</blockquote>
-            <div class="testi-footer">
-              <strong>Favour Ogbah</strong>
-              <span>Creator, livestreamer, salesperson.</span>
-            </div>
-          </div>
+          <div class="testi-card reveal"><blockquote>The Dojo has assisted me in so many ways in my streaming journey. <br>From getting me a better mobile gaming device to getting a good camera, then a streaming device and software to help run my stream smoothly on YouTube.<br><br> They have also helped me gain knowledge on recent technology to dig into and its benefits.</blockquote><div class="testi-footer"><strong>Oje</strong><span>Livestreamer, Creator.</span></div></div>
+          <div class="testi-card reveal"><blockquote><br>Working with the dojo has been such a great experience; they helped me scale from no content to quality content through goal-focused acquisition of gadgets and services, enabling me to work with brands both local and international. And I still actively work with them.</blockquote><div class="testi-footer"><strong>Mrs. Igunboh</strong><span>UGC Creator</span></div></div>
+          <div class="testi-card reveal"><blockquote><br>The Dojo inspired the creation of the Flavy gaming brand and provided actionable ideas, information and tips on the right gadgets that helped scale the brand from a dream to fruition on a next-to-zero budget. I've used their services for designing, procurement and a whole lot more! And the show is still very much on.</blockquote><div class="testi-footer"><strong>Favour Ogbah</strong><span>Creator, livestreamer, salesperson.</span></div></div>
         </div>
       </div>
     </section>
-
     <section class="section" id="contact">
       <div class="container contact-grid">
         <div class="reveal">
@@ -444,33 +291,37 @@
           <a class="btn btn-red" href="mailto:thedojo@cirphrank.com" style="margin-top:2rem">Send us an email</a>
         </div>
         <div class="contact-links reveal">
-          <div class="contact-card">
-            <div class="c-label">Email</div>
-            <h3>thedojo@cirphrank.com</h3>
-            <p>Primary contact for inquiries and project conversations.</p>
-            <a class="clink" href="mailto:thedojo@cirphrank.com">Send email →</a>
-          </div>
-          <div class="contact-card">
-            <div class="c-label">Founder social</div>
-            <h3>X / Cirphrank</h3>
-            <p>Founder updates and public activity.</p>
-            <a class="clink" href="https://www.x.com/cirphrank" target="_blank" rel="noopener">Visit X →</a>
-          </div>
-          <div class="contact-card">
-            <div class="c-label">Brand channel</div>
-            <h3>YouTube</h3>
-            <p>Creator's On A Budget 😉.</p>
-            <a class="clink" href="https://www.youtube.com/channel/UC62Abp_B7aYzkGJU1Od0IWg" target="_blank" rel="noopener">Visit YouTube →</a>
-          </div>
-          <div class="contact-card">
-            <div class="c-label">Availability</div>
-            <h3>Available for YOUR work</h3>
-            <p>Open to creator projects ranging from content creation to services like; logo design, website development...</p>
-          </div>
+          <div class="contact-card"><div class="c-label">Email</div><h3>thedojo@cirphrank.com</h3><p>Primary contact for inquiries and project conversations.</p><a class="clink" href="mailto:thedojo@cirphrank.com">Send email →</a></div>
+          <div class="contact-card"><div class="c-label">Founder social</div><h3>X / Cirphrank</h3><p>Founder updates and public activity.</p><a class="clink" href="https://www.x.com/cirphrank" target="_blank" rel="noopener">Visit X →</a></div>
+          <div class="contact-card"><div class="c-label">Brand channel</div><h3>YouTube</h3><p>Creator's On A Budget 😉.</p><a class="clink" href="https://www.youtube.com/channel/UC62Abp_B7aYzkGJU1Od0IWg" target="_blank" rel="noopener">Visit YouTube →</a>
+        </div>
+          <div class="contact-card"><div class="c-label">Brand channel</div><h3>WhatsApp</h3><p>Creator's On A Budget 😉.</p><a class="clink" href="https://whatsapp.com/channel/0029Va8JZRFLo4hdLj4LGE16" target="_blank" rel="noopener">Join Channel →</a>
         </div>
       </div>
     </section>
-
+    <section class="section" id="subscribe" style="padding-top:0">
+      <div class="container">
+        <div class="subscribe-wrap reveal">
+          <div class="result-tag">Creators Notes</div>
+          <div class="result-title">Join the Dojo list</div>
+          <p class="result-desc">Get creator updates, new resources, and occasional strategy notes from The Dojo.</p>
+          <form name="subscribers" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display:grid; gap:1rem; margin-top:0">
+            <input type="hidden" name="form-name" value="subscribers">
+            <p style="display:none"><label>Don’t fill this out: <input name="bot-field"></label></p>
+            <div style="display:grid; gap:.7rem">
+              <label style="font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; color:var(--gray)">Name</label>
+              <input name="name" type="text" required placeholder="Your name" style="width:100%; padding:1rem 1.1rem; border-radius:14px; border:1.5px solid rgba(88,118,168,.16); background:#fff; color:var(--ink); font:inherit; box-shadow:inset 0 1px 0 rgba(255,255,255,.7)">
+            </div>
+            <div style="display:grid; gap:.7rem">
+              <label style="font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; color:var(--gray)">Email</label>
+              <input name="email" type="email" required placeholder="you@example.com" style="width:100%; padding:1rem 1.1rem; border-radius:14px; border:1.5px solid rgba(88,118,168,.16); background:#fff; color:var(--ink); font:inherit; box-shadow:inset 0 1px 0 rgba(255,255,255,.7)">
+            </div>
+            <button type="submit" class="btn btn-red" style="justify-content:center; width:100%">Subscribe</button>
+            <p class="hint" style="margin-bottom:0">No spam. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+    </section>
     <div class="cta-band">
       <div class="container">
         <h2><s>Ready to get started?</s> You are!</h2>
@@ -479,14 +330,12 @@
       </div>
     </div>
   </main>
-
   <footer class="footer">
     <div class="container footer-wrap">
       <p><strong>The Dojo</strong> — a creator-focused agency by Cirphrank.</p>
       <p>We help creators get started, get seen, and scale up.</p>
     </div>
   </footer>
-
   <script>
     (() => {
       const menu = document.querySelector('[data-menu]');
